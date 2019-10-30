@@ -84,11 +84,11 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hello Hexo">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;10&#x2F;27&#x2F;Hello-Hexo&#x2F;index.html">
-<meta property="og:site_name" content="chen&#39;s blog">
+<meta property="og:site_name" content="macro&#39;s blog">
 <meta property="og:description" content="This is my first attempt at writing a blog.个人练习&#x2F;学习用，不具参考意义, 实际还需自行验证看实际渲染效果">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;images&#x2F;my_avatar.jpg">
-<meta property="og:updated_time" content="2019-10-28T02:41:53.830Z">
+<meta property="og:updated_time" content="2019-10-30T01:31:42.270Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;images&#x2F;my_avatar.jpg">
 
@@ -126,7 +126,7 @@
 
 
 
-  <title>Hello Hexo | chen's blog</title>
+  <title>Hello Hexo | macro's blog</title>
   
 
 
@@ -156,7 +156,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">chen's blog</span>
+        <span class="site-title">macro's blog</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -306,7 +306,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="chen's blog">
+      <meta itemprop="name" content="macro's blog">
     </span>
 
     
@@ -337,6 +337,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/hexo/" itemprop="url" rel="index">
+                    <span itemprop="name">hexo</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -363,7 +385,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  504 字
+                  634 字
                 </span>
               
 
@@ -514,7 +536,18 @@
 <h4 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g</span><br></pre></td></tr></table></figure>
 <h4 id="部署至github"><a href="#部署至github" class="headerlink" title="部署至github"></a>部署至github</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
-<h3 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h3><p><a href="//twiceyuan.com/2014/05/25/hexo%E8%87%AA%E5%8A%A8%E6%B7%BB%E5%8A%A0readmore%E6%A0%87%E8%AE%B0/">标签<code>&lt;!-- more --&gt;</code>自定义显示Hexo首页文章简述</a></p>
+<h3 id="Hexo-blog-encrypt"><a href="#Hexo-blog-encrypt" class="headerlink" title="Hexo-blog-encrypt"></a>Hexo-blog-encrypt</h3><p><strong>文章加密注意事项</strong><br>插件正常安装后，加密文章时，一定要注意Front-matter参数抒写规则，特别是“Tags”参数，否则 “hexo g”时候，可能会出现错误</p>
+<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[front-matter]</span><br><span class="line">title: About Me</span><br><span class="line">date: 2019<span class="string">-10</span><span class="string">-24</span> 23:03:35a</span><br><span class="line"><span class="keyword">tags:</span> about_me  错误</span><br><span class="line"><span class="keyword">tags:</span></span><br><span class="line">    - about_me  正确</span><br><span class="line"></span><br><span class="line">[ 错误tags, “hexo g”可能会提示 ]</span><br><span class="line">TypeError: data.tags.forEach is not a function</span><br><span class="line">    at Hexo.&lt;anonymous&gt; (F:\MyWork\MyGit\MyBlog\node_modules\hexo-blog-encrypt\index.js:39:15)</span><br><span class="line"></span><br><span class="line">建议执行"hexo g --debug", 调试具体那篇post出现问题</span><br></pre></td></tr></table></figure>
+
+<h3 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h3><ul>
+<li><a href="https://hexo.io/zh-cn/docs/permalinks" target="_blank" rel="noopener" title="link">Hexo 文档</a></li>
+</ul>
+<ul>
+<li><a href="//twiceyuan.com/2014/05/25/hexo%E8%87%AA%E5%8A%A8%E6%B7%BB%E5%8A%A0readmore%E6%A0%87%E8%AE%B0/">Blog首页文章简述自定义</a></li>
+</ul>
+<ul>
+<li><a href="//easyhexo.com/3-Plugins-use-and-config/3-4-hexo-blog-encrypt/#%E7%AE%80%E4%BB%8B">Blog文章加密hexo-blog-encrypt</a></li>
+</ul>
 
       
     </div>
@@ -541,6 +574,22 @@
       
       
 
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/10/29/thirty-review/" rel="prev" title="三十而立之回首">
+                三十而立之回首 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
 
       
@@ -618,12 +667,21 @@
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
             
 
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
             
 
             
@@ -631,7 +689,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -678,7 +736,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Hexo-Markdown-Practise"><span class="nav-number">1.</span> <span class="nav-text">Hexo Markdown Practise</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#标题"><span class="nav-number">1.1.</span> <span class="nav-text">标题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#斜-粗体"><span class="nav-number">1.2.</span> <span class="nav-text">斜/粗体</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#下划线"><span class="nav-number">1.3.</span> <span class="nav-text">下划线</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#删除线"><span class="nav-number">1.4.</span> <span class="nav-text">删除线</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#链接文字-图片"><span class="nav-number">1.5.</span> <span class="nav-text">链接文字/图片</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码片段-代码块"><span class="nav-number">1.6.</span> <span class="nav-text">代码片段/代码块</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#表格"><span class="nav-number">1.7.</span> <span class="nav-text">表格</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#无序-有序列表"><span class="nav-number">1.8.</span> <span class="nav-text">无序/有序列表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#引用"><span class="nav-number">1.9.</span> <span class="nav-text">引用</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hexo-Operation"><span class="nav-number">2.</span> <span class="nav-text">Hexo Operation</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#新建页面"><span class="nav-number">2.1.</span> <span class="nav-text">新建页面</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#新建文章"><span class="nav-number">2.2.</span> <span class="nav-text">新建文章</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#清除缓存"><span class="nav-number">2.3.</span> <span class="nav-text">清除缓存</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#生成静态文件"><span class="nav-number">2.4.</span> <span class="nav-text">生成静态文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#部署至github"><span class="nav-number">2.5.</span> <span class="nav-text">部署至github</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考文章"><span class="nav-number">3.</span> <span class="nav-text">参考文章</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Hexo-Markdown-Practise"><span class="nav-number">1.</span> <span class="nav-text">Hexo Markdown Practise</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#标题"><span class="nav-number">1.1.</span> <span class="nav-text">标题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#斜-粗体"><span class="nav-number">1.2.</span> <span class="nav-text">斜/粗体</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#下划线"><span class="nav-number">1.3.</span> <span class="nav-text">下划线</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#删除线"><span class="nav-number">1.4.</span> <span class="nav-text">删除线</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#链接文字-图片"><span class="nav-number">1.5.</span> <span class="nav-text">链接文字/图片</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码片段-代码块"><span class="nav-number">1.6.</span> <span class="nav-text">代码片段/代码块</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#表格"><span class="nav-number">1.7.</span> <span class="nav-text">表格</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#无序-有序列表"><span class="nav-number">1.8.</span> <span class="nav-text">无序/有序列表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#引用"><span class="nav-number">1.9.</span> <span class="nav-text">引用</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hexo-Operation"><span class="nav-number">2.</span> <span class="nav-text">Hexo Operation</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#新建页面"><span class="nav-number">2.1.</span> <span class="nav-text">新建页面</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#新建文章"><span class="nav-number">2.2.</span> <span class="nav-text">新建文章</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#清除缓存"><span class="nav-number">2.3.</span> <span class="nav-text">清除缓存</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#生成静态文件"><span class="nav-number">2.4.</span> <span class="nav-text">生成静态文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#部署至github"><span class="nav-number">2.5.</span> <span class="nav-text">部署至github</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hexo-blog-encrypt"><span class="nav-number">3.</span> <span class="nav-text">Hexo-blog-encrypt</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考文章"><span class="nav-number">4.</span> <span class="nav-text">参考文章</span></a></li></ol></div>
             
 
           </div>

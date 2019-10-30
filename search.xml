@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>三十而立之回首</title>
+    <url>/2019/10/29/thirty-review/</url>
+    <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <div class="hbe-input-container">
+  <input type="password" id="hbePass" placeholder="Please input the password" />
+    <label for="hbePass">Please input the password</label>
+    <div class="bottom-line"></div>
+  </div>
+  <script id="hbeData" type="hbeData" data-hmacdigest="3c8b9b2f8e7b8e507daf85b8a36fea86648c1f336cafd280be16207667f6ce48">8df278b2d21590a42436262bd84f2a9e1bee04b4127ce26155122b17188f2331e1def56758f1c5f68d8562108d385beef4d6795f11a8fdc69d319beff87487d8cbadbaa0d283e5f3f83423509241eefdc22de3e88930ae1047f34bcbd3425b9f8ffcb35fb645997ef11771a15ffb68cfced100878c7d1ae57ae7b9fe615cda3f71543979d717e1747d6a7427fd26a01f29f3c3ea89be9349f6ea71d8c297ad129ca21032f2a45fef62948c5836785913fd3f9c4941d93b2a24d813fd908a6e35df5a64f15545bbaeac310be6557c0c0eacd6b10f9db27e3711a884113684e8b49d6c5e8d32653cac37da59db4dc0c71d90e397b7a96f782d23661c0a196dcf6815f10996732e84f69cb3548c9d31ba03670b332cdf721b4023f5921f0c867418feec9fe7c12f2abbd0f603699b1f3ac49a18c6bfae6c7d376cac481621d1cd21e7c72138fbfb93bfc255ce2ff17afc98a2114b1974b5ead33e2131c36b7448a7</script>
+</div>
+<script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+      <categories>
+        <category>心记</category>
+      </categories>
+      <tags>
+        <tag>心记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello Hexo</title>
     <url>/2019/10/27/Hello-Hexo/</url>
     <content><![CDATA[<blockquote>
@@ -117,8 +136,22 @@
 <h4 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo g</span><br></pre></td></tr></table></figure>
 <h4 id="部署至github"><a href="#部署至github" class="headerlink" title="部署至github"></a>部署至github</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
-<h3 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h3><p><a href="//twiceyuan.com/2014/05/25/hexo%E8%87%AA%E5%8A%A8%E6%B7%BB%E5%8A%A0readmore%E6%A0%87%E8%AE%B0/">标签<code>&lt;!-- more --&gt;</code>自定义显示Hexo首页文章简述</a></p>
+<h3 id="Hexo-blog-encrypt"><a href="#Hexo-blog-encrypt" class="headerlink" title="Hexo-blog-encrypt"></a>Hexo-blog-encrypt</h3><p><strong>文章加密注意事项</strong><br>插件正常安装后，加密文章时，一定要注意Front-matter参数抒写规则，特别是“Tags”参数，否则 “hexo g”时候，可能会出现错误</p>
+<figure class="highlight subunit"><table><tr><td class="code"><pre><span class="line">[front-matter]</span><br><span class="line">title: About Me</span><br><span class="line">date: 2019<span class="string">-10</span><span class="string">-24</span> 23:03:35a</span><br><span class="line"><span class="keyword">tags:</span> about_me  错误</span><br><span class="line"><span class="keyword">tags:</span></span><br><span class="line">    - about_me  正确</span><br><span class="line"></span><br><span class="line">[ 错误tags, “hexo g”可能会提示 ]</span><br><span class="line">TypeError: data.tags.forEach is not a function</span><br><span class="line">    at Hexo.&lt;anonymous&gt; (F:\MyWork\MyGit\MyBlog\node_modules\hexo-blog-encrypt\index.js:39:15)</span><br><span class="line"></span><br><span class="line">建议执行"hexo g --debug", 调试具体那篇post出现问题</span><br></pre></td></tr></table></figure>
+
+<h3 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h3><ul>
+<li><a href="https://hexo.io/zh-cn/docs/permalinks" target="_blank" rel="noopener" title="link">Hexo 文档</a></li>
+</ul>
+<ul>
+<li><a href="//twiceyuan.com/2014/05/25/hexo%E8%87%AA%E5%8A%A8%E6%B7%BB%E5%8A%A0readmore%E6%A0%87%E8%AE%B0/">Blog首页文章简述自定义</a></li>
+</ul>
+<ul>
+<li><a href="//easyhexo.com/3-Plugins-use-and-config/3-4-hexo-blog-encrypt/#%E7%AE%80%E4%BB%8B">Blog文章加密hexo-blog-encrypt</a></li>
+</ul>
 ]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
       <tags>
         <tag>hexo</tag>
       </tags>
